@@ -3,16 +3,14 @@ package com.codingshuttle.razorpay.merchant.entity;
 import com.codingshuttle.razorpay.common.enums.BusinessType;
 import com.codingshuttle.razorpay.common.enums.MerchantStatus;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
 @Table(name = "merchant")
-@Data
+@Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
