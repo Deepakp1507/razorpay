@@ -22,7 +22,8 @@ public class Customer {
     private String contactNumber;
 
     private LocalDateTime deletedAt;
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false) /* Not ManyToMany because we want to manage isolation, if we did this, then all merchant will have access to all data, suppose one customer gave some info to zara
+    and not to h&m, then h&m should not have access to that data, so we need to manage isolation, so we will use ManyToOne */
     @JoinColumn(name = "merchant_id", nullable = false)
     private  Merchant merchant;
 
